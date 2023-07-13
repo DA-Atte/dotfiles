@@ -28,13 +28,13 @@
 	name = {{ .name }}
 	email = {{ .email }}
 
-{{ if .is_codespace -}}
+#{{ if .is_codespace -}}
 # For Github Codespaces
-[includeIf "gitdir:**/workspaces/*/"]
-	path = ~/.config/git/dagmar
-{{ end -}}
+#[includeIf "gitdir:**/workspaces/*/"]
+#	path = ~/.config/git/dagmar
+#{{ end -}}
 
-{{ if not .is_codespace -}}
-[includeIf "gitdir:**/Dagmar/*/"]
-	path = ~/.config/git/dagmar
-{{ end -}}
+#{{ if not .is_codespace -}}
+#[includeIf "gitdir:**/Dagmar/*/"]
+#	path = ~/.config/git/dagmar
+#{{ end -}}
